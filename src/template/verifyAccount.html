@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Account Verification</title>
+
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+         }
+         .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+         }
+         .header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+         }
+         .content {
+            padding: 20px;
+            line-height: 1.6;
+         }
+         .content p {
+            margin: 10px 0;
+         }
+         .verification-code {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #4caf50;
+            margin: 20px 0;
+         }
+         .footer {
+            text-align: center;
+            background-color: #f1f1f1;
+            color: #777;
+            font-size: 14px;
+            padding: 10px;
+         }
+         .footer a {
+            color: #4caf50;
+            text-decoration: none;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="email-container">
+         <div class="header">
+            <h1>Xác thực tài khoản</h1>
+         </div>
+         <div class="content">
+            <p>Xin chào <strong>{{USER_NAME}}</strong>,</p>
+            <p>
+               Chúng tôi nhận được yêu cầu xác thực tài khoản của bạn. Hãy sử dụng mã xác thực dưới đây để hoàn tất quy
+               trình:
+            </p>
+            <div class="verification-code">{{VERIFICATION_CODE}}</div>
+            <p>
+               Mã xác thực này chỉ có hiệu lực trong vòng <strong>{{EX}} phút</strong>. Nếu bạn không yêu cầu xác thực,
+               hãy bỏ qua email này.
+            </p>
+            <p>Cảm ơn bạn,<br />Đội ngũ hỗ trợ</p>
+         </div>
+         <div class="footer">
+            <p>© 2024 Your Company. Mọi quyền được bảo lưu.</p>
+            <p><a href="#">Chính sách bảo mật</a> | <a href="#">Điều khoản dịch vụ</a></p>
+         </div>
+      </div>
+   </body>
+</html>
